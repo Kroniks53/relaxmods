@@ -1,166 +1,165 @@
 {
-	"general": {
-		"disable_mod": false,
-		"hide_bossbar": true,
-		"shadow_text": true,
-		"auto_start": false,
-		"animationSpeed": 1.0,
-		"always_show_ping": false,
-		"hide_debug_crosshair": false,
-		"background_color": 1867534416,
-		"space_modules": false,
-		"always_show_profiler": false,
-		"animations": true,
-		"fontScale": 1.0,
-		"hide_sidebar": true,
-		"always_show_tps": false
-	},
-	"modules_right": [
-		{
-			"name": "system",
-			"name_color": 16755200,
-			"value_color": 5636095,
-			"lines": {
-				"opengl_version": false,
-				"allocation_rate": false,
-				"display": false,
-				"java_version": true,
-				"gpu_driver": false,
-				"memory_usage": true,
-				"allocated_memory": false,
-				"cpu": false,
-				"gpu_utilization": false,
-				"time": true,
-				"gpu": false
-			},
-			"enabled": true
-		}, 
-		{
-			"empty_lines": 1,
-			"name": "empty",
-			"lines": {
-				"nothing": true
-			},
-			"enabled": true
-		}, 
-		{
-			"name": "target",
-			"name_color": 43775,
-			"value_color": 16777045,
-			"lines": {
-				"id_fluid": false,
-				"fluid_tags": false,
-				"block_states": true,
-				"targeted_block": true,
-				"block_tags": false,
-				"id_block": true,
-				"nothing": true,
-				"nothing2": false,
-				"targeted_fluid": false,
-				"targeted_entity": true,
-				"fluid_states": false
-			},
-			"enabled": true
-		}
-	],
 	"modules_left": [
 		{
 			"name": "minecraft",
 			"name_color": 10506797,
 			"value_color": 43520,
+			"enabled": true,
 			"lines": {
 				"minecraft": true
-			},
-			"enabled": true
+			}
 		}, 
 		{
+			"name": "fps",
 			"color_high": 5635925,
 			"color_med": 16777045,
-			"name": "fps",
+			"color_low": 16733525,
+			"enabled": true,
 			"lines": {
 				"fps": true
-			},
-			"enabled": true,
-			"color_low": 16733525
+			}
 		}, 
 		{
-			"empty_lines": 2,
 			"name": "empty",
+			"empty_lines": 2,
+			"enabled": true,
 			"lines": {
 				"nothing": true
-			},
-			"enabled": true
+			}
 		}, 
 		{
+			"name": "coords",
+			"name_color": 16733525,
 			"color_x": 16733525,
 			"color_y": 5635925,
 			"color_z": 5636095,
-			"name": "coords",
-			"name_color": 16733525,
+			"enabled": true,
 			"lines": {
-				"chunk_coords": true,
 				"player_coords": true,
 				"block_coords": true,
-				"velocity": false,
 				"chunk_relative_coords": true,
-				"abs_velocity": true
-			},
-			"enabled": true
+				"chunk_coords": true
+			}
 		}, 
 		{
-			"empty_lines": 2,
 			"name": "empty",
+			"empty_lines": 2,
+			"enabled": true,
 			"lines": {
 				"nothing": true
-			},
-			"enabled": true
+			}
 		}, 
 		{
 			"name": "location",
 			"name_color": 43520,
 			"value_color": 5636095,
+			"enabled": true,
 			"lines": {
-				"light": true,
-				"biome": true,
-				"rotation": true,
+				"dimension": true,
 				"facing": true,
-				"slime_chunk": false,
+				"rotation": true,
+				"light": true,
+				"light_server": false,
+				"highest_block": false,
+				"highest_block_server": false,
+				"biome": true,
 				"local_difficulty": false,
 				"day_ticks": false,
 				"days_played": true,
-				"dimension": true,
-				"highest_block": false,
-				"highest_block_server": false,
-				"light_server": false
-			},
-			"enabled": true
+				"slime_chunk": false
+			}
 		}, 
 		{
-			"empty_lines": 2,
 			"name": "empty",
+			"empty_lines": 2,
+			"enabled": true,
 			"lines": {
 				"nothing": true
-			},
-			"enabled": true
+			}
 		}, 
 		{
 			"name": "entity",
 			"name_color": 16733525,
 			"value_color": 16777045,
 			"total_entities_color": 16755200,
+			"enabled": true,
 			"lines": {
-				"entities": true,
-				"water_creature": false,
-				"underground_water_creature": false,
-				"ambient": false,
 				"particles": true,
-				"axolotls": false,
-				"creature": false,
-				"water_ambient": false,
+				"entities": true,
 				"monster": true,
+				"creature": false,
+				"ambient": false,
+				"axolotls": false,
+				"underground_water_creature": false,
+				"water_creature": false,
+				"water_ambient": false,
 				"misc": false
-			},
-			"enabled": true
+			}
 		}
-	]
+	],
+	"modules_right": [
+		{
+			"name": "system",
+			"name_color": 16755200,
+			"value_color": 5636095,
+			"memory_color_toggle": true,
+			"time_format": "HH:mm:ss",
+			"enabled": true,
+			"lines": {
+				"time": true,
+				"java_version": true,
+				"memory_usage": true,
+				"allocation_rate": false,
+				"allocated_memory": false,
+				"cpu": false,
+				"display": false,
+				"gpu": false,
+				"gpu_utilization": false,
+				"opengl_version": false,
+				"gpu_driver": false
+			}
+		}, 
+		{
+			"name": "empty",
+			"empty_lines": 1,
+			"enabled": true,
+			"lines": {
+				"nothing": true
+			}
+		}, 
+		{
+			"name": "target",
+			"name_color": 43775,
+			"value_color": 16777045,
+			"enabled": true,
+			"lines": {
+				"targeted_block": true,
+				"id_block": true,
+				"block_states": true,
+				"block_tags": false,
+				"nothing": true,
+				"targeted_fluid": false,
+				"id_fluid": false,
+				"fluid_states": false,
+				"fluid_tags": false,
+				"nothing2": false,
+				"targeted_entity": true
+			}
+		}
+	],
+	"general": {
+		"disable_mod": false,
+		"auto_start": false,
+		"space_modules": false,
+		"shadow_text": true,
+		"animations": true,
+		"animationSpeed": 1.0,
+		"fontScale": 1.0,
+		"background_color": 1867534416,
+		"hide_debug_crosshair": true,
+		"hide_sidebar": true,
+		"hide_bossbar": true,
+		"always_show_profiler": false,
+		"always_show_tps": false
+	}
 }
