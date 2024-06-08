@@ -19,9 +19,9 @@
 	#Enable/Disable the Game Loading Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Minecraft is loading"
+	description = "Майнкрафт запускается.."
 	#The second line of text under the app name
-	state = "Game Starting..."
+	state = "Игра запускается.."
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -38,9 +38,9 @@
 	#Enable/Disable the Main Menu Event
 	enabled = true
 	#The first line of text under the app name
-	description = "%player% is currently lazy"
+	description = "%player% афк"
 	#The seconds line of text under the app name
-	state = "Chilling in the menu"
+	state = "Отдыхает в меню"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -57,9 +57,9 @@
 	#Enable/Disable the Server List Event
 	enabled = true
 	#The first line of text under the app name
-	description = "%player% is looking for a server"
+	description = "%player% ищет сервер для игры"
 	#The second line of text under the app name
-	state = "Searching for friends"
+	state = "Ищет друзей"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -74,7 +74,7 @@
 #The Realms Screen event
 [realms_list]
 	#Enable/Disable the Realms Screen Event
-	enabled = true
+	enabled = false
 	#The first line of text under the app name
 	description = "%player% is looking for a Realm"
 	#The second line of text under the app name
@@ -95,9 +95,9 @@
 	#Enable/Disable the Join Game Event
 	enabled = true
 	#The first line of text under the app name
-	description = "%player% is joining a game"
+	description = "%player% подключается к игре"
 	#The second line of text under the app name
-	state = "Joining Game"
+	state = "Подключается к миру"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -114,9 +114,9 @@
 	#Enable/Disable the Single Player Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Currently In %world%"
+	description = "Играет в %world%"
 	#The second line of text under the app name
-	state = "Playing lonely mode"
+	state = "Играет в одиночной игре"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -133,9 +133,9 @@
 	#Enable/Disable the Multi Player Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Playing on %servername% with %players% players"
+	description = "Играет на relaxmine.ru с %players% игроками"
 	#The second line of text under the app name
-	state = "Playing online"
+	state = "Играет онлайн"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
@@ -143,14 +143,14 @@
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
 #The Realms Game Event
 [realms]
 	#Enable/Disable the Realms Game Event
-	enabled = true
+	enabled = false
 	#The first line of text under the app name
 	description = "Playing on %realmname%"
 	#The second line of text under the app name
@@ -169,7 +169,7 @@
 #Fallback event for disabled events
 [generic]
 	#The first line of text under the app name
-	description = "Playing Minecraft"
+	description = "Играет в майнкрафт"
 	#The second line of text under the app name
 	state = ""
 	#The Asset ID of the image to display as the large image
@@ -179,7 +179,7 @@
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -210,7 +210,7 @@
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "%mods% моды установлены"
 		#The buttons to display on Discord
 		buttons = []
 
@@ -228,7 +228,7 @@
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "%mods% моды установлены"
 		#The buttons to display on Discord
 		buttons = []
 
@@ -246,7 +246,7 @@
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
-		smallImageText = "%mods% mods installed"
+		smallImageText = "%mods% моды установлены"
 		#The buttons to display on Discord
 		buttons = []
 
