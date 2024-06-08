@@ -20,15 +20,6 @@ energiserSpeedMultiplier = 1.0
 #Multiplier for the temperature at which components overheat. Set to -1 to disable overheating.
 #Range: -1.0 ~ 1.7976931348623157E308
 overheatingMultiplier = 1.0
-#Multiplier for how much heat pipes obtain from passive heat sources like Lava or even Boilers.
-#Range: 0.0 ~ 1.7976931348623157E308
-passiveHeatSourceMultiplier = 1.0
-#How much heat do pipes loose per second.
-#Range: 0.0 ~ 1.7976931348623157E308
-passivePipeHeatLoss = 1.0
-#Multiplier for how much heat a boiler needs.
-#Range: 0.0 ~ 1.7976931348623157E308
-boilerRequiredHeatMultiplier = 1.0
 #How much heat per tick a nuclear reactor rod generate.
 #Range: 0.0 ~ 1.7976931348623157E308
 ReactorRodHeat = 30.0
@@ -38,6 +29,15 @@ ReactorRodHeatLoss = 25.0
 #Multiplier for how much heat solar panels output.
 #Range: 0.0 ~ 1.7976931348623157E308
 solarPanelHeatMultiplier = 1.0
+#Multiplier for how much heat pipes obtain from passive heat sources like Lava or even Boilers.
+#Range: 0.0 ~ 1.7976931348623157E308
+passiveHeatSourceMultiplier = 1.0
+#How much heat do pipes loose per second.
+#Range: 0.0 ~ 1.7976931348623157E308
+passivePipeHeatLoss = 1.0
+#Multiplier for how much heat a boiler needs.
+#Range: 0.0 ~ 1.7976931348623157E308
+boilerRequiredHeatMultiplier = 1.0
 #Maximum wire length
 #Range: > 1
 maxWireLength = 16
@@ -73,7 +73,6 @@ maxWireLength = 16
 	#Top Speed of a basic motor
 	#Range: 1.0 ~ 1.7976931348623157E308
 	basicMotorSpeed = 128.0
-
 ["Motor Extensions"]
 	#Power Multiplier of a basic motor extension
 	#Range: 1.0 ~ 1.7976931348623157E308
@@ -93,4 +92,3 @@ maxWireLength = 16
 	#Advanced motor extension scroll step
 	#Range: > 1
 	advancedMotorExtensionScrollStep = 8
-
