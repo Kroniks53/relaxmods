@@ -10,17 +10,17 @@
 	#Enable/Disable the ReplayMod Replay Viewer Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Browsing Replays"
+	description = "Просматривает записи"
 	#The second line of text under the app name
-	state = "%player% is browsing the library"
+	state = "%player% просматривает библиотеку"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -29,17 +29,17 @@
 	#Enable/Disable the ReplayMod Editor Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Editing a video"
+	description = "Редактирует запись"
 	#The second line of text under the app name
-	state = "%player% is reviewing footage"
+	state = "%player% пересматривает запись"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -48,17 +48,17 @@
 	#Enable/Disable the ReplayMod Rendering Event
 	enabled = true
 	#The first line of text under the app name
-	description = "Exporting a video with %replaytimeleft% left"
+	description = "Экспортирует запись"
 	#The second line of text under the app name
-	state = "Rendering %replayframe%/%replaytotal% frames"
+	state = "Рендеринг %replayframe%/%replaytotal% кадров"
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 

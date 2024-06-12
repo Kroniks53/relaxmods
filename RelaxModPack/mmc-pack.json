@@ -12,6 +12,7 @@
             "cachedName": "Minecraft",
             "cachedRequires": [
                 {
+                    "equals": "3.3.1",
                     "suggests": "3.3.1",
                     "uid": "org.lwjgl3"
                 }

@@ -64,7 +64,7 @@
     "commandNameSetblock": "setblock",
     "commandNameSummon": "summon",
     "commandTaskInterval": 1,
-    "customSchematicBaseDirectory": "C:\\Users\\ПК\\Desktop\\MultiMC\\instances\\Fabulously Optimized 5.4.1\\.minecraft\\schematics",
+    "customSchematicBaseDirectory": "C:\\Users\\ПК\\AppData\\Roaming\\PrismLauncher\\instances\\Сервер 1.20.1 с с модами\\.minecraft\\schematics",
     "easyPlaceSwapInterval": 0,
     "pickBlockableSlots": "1,2,3,4,5",
     "toolItem": "minecraft:stick"
@@ -86,7 +86,7 @@
       "keys": ""
     },
     "executeOperation": {
-      "keys": ""
+      "keys": "APOSTROPHE"
     },
     "invertGhostBlockRenderState": {
       "keys": ""
@@ -125,7 +125,7 @@
       "keys": ""
     },
     "openGuiMainMenu": {
-      "keys": "APOSTROPHE"
+      "keys": "RIGHT_BRACKET"
     },
     "openGuiMaterialList": {
       "keys": "M,L"

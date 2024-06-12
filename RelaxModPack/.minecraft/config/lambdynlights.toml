@@ -13,24 +13,24 @@ mode = "fastest"
 		[light_sources.settings.entities]
 
 			[light_sources.settings.entities.minecraft]
-				player = true
+				chicken = true
+				axolotl = true
+				bee = true
+				arrow = true
+				block_display = true
+				cow = true
+				chest_boat = true
+				boat = true
+				chest_minecart = true
 				allay = true
 				area_effect_cloud = true
-				armor_stand = true
-				arrow = true
-				axolotl = true
 				bat = true
-				bee = true
 				blaze = true
-				block_display = true
-				boat = true
 				camel = true
 				cat = true
 				cave_spider = true
-				chest_boat = true
-				chest_minecart = true
-				chicken = true
+				armor_stand = true
 				cod = true
 				command_block_minecart = true
-				cow = true
+				player = true
 

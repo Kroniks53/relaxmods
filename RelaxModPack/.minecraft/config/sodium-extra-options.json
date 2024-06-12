@@ -14,15 +14,15 @@
     "block_break": true,
     "block_breaking": true,
     "other": {
-      "minecraft:rain": false,
-      "minecraft:falling_water": false
+      "minecraft:rain": true,
+      "minecraft:falling_water": true
     }
   },
   "detail_settings": {
     "sky": true,
     "sun_moon": true,
     "stars": true,
-    "rain_snow": false,
+    "rain_snow": true,
     "biome_colors": true,
     "sky_colors": true
   },
@@ -31,7 +31,9 @@
     "fog_start": 100,
     "multi_dimension_fog_control": false,
     "dimensionFogDistance": {
-      "minecraft:overworld": 0
+      "minecraft:overworld": 0,
+      "minecraft:the_nether": 0,
+      "minecraft:the_end": 0
     },
     "light_updates": true,
     "item_frame": true,
@@ -51,7 +53,7 @@
     "show_coords": true,
     "reduce_resolution_on_mac": false,
     "use_adaptive_sync": false,
-    "cloud_height": 192,
+    "cloud_height": 319,
     "cloud_distance": 100,
     "toasts": true,
     "advancement_toast": true,
