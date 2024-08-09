@@ -25,11 +25,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -44,11 +44,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -63,11 +63,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -82,11 +82,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -101,11 +101,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -120,11 +120,11 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
-	smallImageText = "%mods% mods installed"
+	smallImageText = "%mods% моды установлены"
 	#The buttons to display on Discord
 	buttons = []
 
@@ -139,7 +139,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
@@ -175,7 +175,7 @@
 	#The Asset ID of the image to display as the large image
 	largeImageKey = ["mclogonew"]
 	#The text that gets displayed when the large image is hovered
-	largeImageText = "It's Minecraft %mcver%, but modded"
+	largeImageText = "Это майнкрафт %mcver%, но модифицированный"
 	#The Asset ID of the image to display as the small image
 	smallImageKey = ["mclogo"]
 	#The text that gets displayed when the small image is hovered
@@ -193,20 +193,20 @@
 #Dimension Information Overrides
 [dimension_overrides]
 	#Allows you to override the displayed values for dimensions
-	enabled = false
+	enabled = true
 
 	#The Dimensions to override
 	[[dimension_overrides.dimensions]]
 		#The name of the Dimension/Biome to override. FORMAT: modid:dimension or modid:biome
-		name = "overworld"
+		name = "Верхний мир"
 		#The first line of text under the app name
-		description = "%player% is in The Overworld"
+		description = "%player% в верхнем мире"
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
 		largeImageKey = ["overworld"]
 		#The text that gets displayed when the large image is hovered
-		largeImageText = "In the Overworld"
+		largeImageText = "Это верхний мир"
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
@@ -216,15 +216,15 @@
 
 	[[dimension_overrides.dimensions]]
 		#The name of the Dimension/Biome to override. FORMAT: modid:dimension or modid:biome
-		name = "the_nether"
+		name = "ад"
 		#The first line of text under the app name
-		description = "%player% is in The Nether"
+		description = "%player% в аду"
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
 		largeImageKey = ["nether"]
 		#The text that gets displayed when the large image is hovered
-		largeImageText = "In the Nether"
+		largeImageText = "Это ад"
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
@@ -234,15 +234,15 @@
 
 	[[dimension_overrides.dimensions]]
 		#The name of the Dimension/Biome to override. FORMAT: modid:dimension or modid:biome
-		name = "the_end"
+		name = "Энд"
 		#The first line of text under the app name
-		description = "%player% is in The End"
+		description = "%player% в энде"
 		#The second line of text under the app name
 		state = ""
 		#The Asset ID of the image to display as the large image
 		largeImageKey = ["end"]
 		#The text that gets displayed when the large image is hovered
-		largeImageText = "In the End"
+		largeImageText = "Это энд"
 		#The Asset ID of the image to display as the small image
 		smallImageKey = ["mclogo"]
 		#The text that gets displayed when the small image is hovered
