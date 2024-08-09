@@ -1,7 +1,7 @@
 # Привет! Это моя сборка модов для игры на нашем сервере
 
 
-Скачай сборку c последнего релиза. [**Клик!**](https://github.com/Kroniks53/relaxmods/releases/v1.1)
+Скачай сборку c последнего релиза, нажав на кнопку `Source code(zip)` или `Исходный код(zip)`.  [**Клик!**](https://github.com/Kroniks53/relaxmods/releases/v1.1)
 
 Вот ссылка на гайд для Tlauncher и TL legacy. [**Клик!**](https://youtu.be/9U89qLSotDA)
 
