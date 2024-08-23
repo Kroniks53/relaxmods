@@ -20,9 +20,10 @@
     "commandUseWorldEdit": false,
     "customSchematicBaseDirectoryEnabled": false,
     "debugLogging": false,
+    "datafixerDefaultSchema": 1139,
     "easyPlaceFirst": true,
     "easyPlaceHoldEnabled": true,
-    "easyPlaceMode": false,
+    "easyPlaceMode": true,
     "easyPlaceSinglePlayerHandling": true,
     "easyPlaceProtocolVersion": "auto",
     "easyPlaceVanillaReach": false,
@@ -33,6 +34,7 @@
     "highlightBlockInInventory": false,
     "itemUsePacketCheckBypass": true,
     "layerModeFollowsPlayer": false,
+    "materialListIgnoreState": false,
     "pasteAlwaysUseFill": false,
     "pasteIgnoreBlockEntitiesEntirely": false,
     "pasteIgnoreBlockEntitiesFromFill": true,
@@ -55,7 +57,7 @@
     "signTextPaste": true,
     "toolItemEnabled": true,
     "unhideSchematicVCS": false,
-    "pasteReplaceBehavior": "none",
+    "pasteReplaceBehavior": "with_non_air",
     "selectionCornersMode": "corners",
     "commandFillMaxVolume": 32768,
     "commandLimitPerTick": 24,
@@ -64,7 +66,7 @@
     "commandNameSetblock": "setblock",
     "commandNameSummon": "summon",
     "commandTaskInterval": 1,
-    "customSchematicBaseDirectory": "C:\\Users\\ПК\\AppData\\Roaming\\PrismLauncher\\instances\\Сервер 1.20.1 с с модами\\.minecraft\\schematics",
+    "customSchematicBaseDirectory": "C:\\Users\\ПК\\Desktop\\MultiMC\\instances\\Fabulously.Optimized-v5.12.0-beta.10\\.minecraft\\schematics",
     "easyPlaceSwapInterval": 0,
     "pickBlockableSlots": "1,2,3,4,5",
     "toolItem": "minecraft:stick"
@@ -80,13 +82,13 @@
       "keys": ""
     },
     "easyPlaceUseKey": {
-      "keys": "BUTTON_2"
+      "keys": "G"
     },
     "easyPlaceToggle": {
-      "keys": ""
+      "keys": "F8"
     },
     "executeOperation": {
-      "keys": "APOSTROPHE"
+      "keys": "F4"
     },
     "invertGhostBlockRenderState": {
       "keys": ""
@@ -95,7 +97,7 @@
       "keys": ""
     },
     "layerModeNext": {
-      "keys": "M,PAGE_UP"
+      "keys": "F6"
     },
     "layerModePrevious": {
       "keys": "M,PAGE_DOWN"
@@ -125,7 +127,7 @@
       "keys": ""
     },
     "openGuiMainMenu": {
-      "keys": "RIGHT_BRACKET"
+      "keys": "APOSTROPHE"
     },
     "openGuiMaterialList": {
       "keys": "M,L"
@@ -319,7 +321,7 @@
     "verifierErrorHilightMaxPositions": 1000
   },
   "Visuals": {
-    "enableRendering": true,
+    "enableRendering": false,
     "enableSchematicRendering": true,
     "enableAreaSelectionBoxesRendering": true,
     "enablePlacementBoxesRendering": true,

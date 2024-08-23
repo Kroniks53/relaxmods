@@ -21,7 +21,27 @@
 		}, 
 		{
 			"name": "empty",
-			"empty_lines": 2,
+			"empty_lines": 1,
+			"enabled": true,
+			"lines": {
+				"nothing": true
+			}
+		}, 
+		{
+			"name": "server",
+			"name_color": 11184810,
+			"value_color": 16777045,
+			"enabled": true,
+			"lines": {
+				"server_tick": true,
+				"packets_sent": false,
+				"packets_received": false,
+				"tick_manager_status": false
+			}
+		}, 
+		{
+			"name": "empty",
+			"empty_lines": 1,
 			"enabled": true,
 			"lines": {
 				"nothing": true
@@ -38,12 +58,14 @@
 				"player_coords": true,
 				"block_coords": true,
 				"chunk_relative_coords": true,
-				"chunk_coords": true
+				"chunk_coords": true,
+				"velocity": false,
+				"abs_velocity": true
 			}
 		}, 
 		{
 			"name": "empty",
-			"empty_lines": 2,
+			"empty_lines": 1,
 			"enabled": true,
 			"lines": {
 				"nothing": true
@@ -62,16 +84,16 @@
 				"light_server": false,
 				"highest_block": false,
 				"highest_block_server": false,
-				"biome": true,
+				"biome": false,
 				"local_difficulty": false,
 				"day_ticks": false,
-				"days_played": true,
+				"days_played": false,
 				"slime_chunk": false
 			}
 		}, 
 		{
 			"name": "empty",
-			"empty_lines": 2,
+			"empty_lines": 1,
 			"enabled": true,
 			"lines": {
 				"nothing": true
@@ -86,7 +108,7 @@
 			"lines": {
 				"particles": true,
 				"entities": true,
-				"monster": true,
+				"monster": false,
 				"creature": false,
 				"ambient": false,
 				"axolotls": false,
@@ -102,8 +124,6 @@
 			"name": "system",
 			"name_color": 16755200,
 			"value_color": 5636095,
-			"memory_color_toggle": true,
-			"time_format": "HH:mm:ss",
 			"enabled": true,
 			"lines": {
 				"time": true,
@@ -160,6 +180,7 @@
 		"hide_sidebar": true,
 		"hide_bossbar": true,
 		"always_show_profiler": false,
-		"always_show_tps": false
+		"always_show_tps": false,
+		"always_show_ping": false
 	}
 }

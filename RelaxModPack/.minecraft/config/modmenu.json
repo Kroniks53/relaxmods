@@ -11,14 +11,18 @@
   "show_libraries": false,
   "hide_mod_license": true,
   "hide_badges": true,
-  "hide_mod_credits": true,
+  "hide_mod_credits": false,
   "easter_eggs": false,
-  "modify_title_screen": true,
-  "modify_game_menu": true,
-  "hide_config_buttons": false,
   "random_java_colors": false,
   "translate_names": true,
   "translate_descriptions": true,
+  "update_checker": false,
+  "button_update_badge": false,
+  "update_channel": "release",
+  "quick_configure": true,
+  "modify_title_screen": true,
+  "modify_game_menu": true,
+  "hide_config_buttons": false,
   "config_mode": false,
   "disable_drag_and_drop": false,
   "hidden_mods": [
@@ -31,8 +35,5 @@
     "puzzle-base"
   ],
   "hidden_configs": [],
-  "disable_update_checker": [],
-  "update_checker": false,
-  "button_update_badge": false,
-  "quick_configure": true
+  "disable_update_checker": []
 }

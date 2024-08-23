@@ -1,0 +1,85 @@
+
+[light_sources]
+	entities = true
+	self = true
+	block_entities = true
+	water_sensitive_check = true
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				player = true
+				chest_minecart = true
+				creeper = true
+				spider = true
+				skeleton = true
+				glow_squid = true
+				zombie = true
+				fox = true
+				wither_skeleton = true
+				zombie_villager = true
+				enderman = true
+				bat = true
+				wolf = true
+				rabbit = true
+				item = true
+				sheep = true
+				allay = true
+				area_effect_cloud = true
+				armadillo = true
+				armor_stand = true
+				arrow = true
+				axolotl = true
+				bee = true
+				blaze = true
+				block_display = true
+				boat = true
+				bogged = true
+				breeze = true
+				breeze_wind_charge = true
+				camel = true
+				cat = true
+				cave_spider = true
+				chest_boat = true
+				chicken = true
+				cod = true
+				command_block_minecart = true
+				cow = true
+				item_frame = true
+				squid = true
+				ender_pearl = true
+				minecart = true
+				villager = true
+				experience_orb = true
+				salmon = true
+				polar_bear = true
+				pig = true
+				ender_dragon = true
+				trader_llama = true
+				wandering_trader = true
+				drowned = true
+				witch = true
+				endermite = true
+				slime = true
+				horse = true
+				pillager = true
+				warden = true
+				phantom = true
+				tropical_fish = true
+				trident = true
+				llama_spit = true
+				lightning_bolt = true
+				iron_golem = true
+				hopper_minecart = true
+				piglin = true
+				zombified_piglin = true
+				ghast = true
+				strider = true
+				hoglin = true
+				goat = true
+				magma_cube = true
+				donkey = true
+				parrot = true
+
