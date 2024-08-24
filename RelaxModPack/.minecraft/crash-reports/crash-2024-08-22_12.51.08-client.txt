@@ -1,0 +1,554 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2024-08-22 12:51:08
+Description: Rendering screen
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.class_2960.method_12836()" because "location" is null
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.isVanillaTopLevelModel(DynamicBakedModelProvider.java:133)
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.get(DynamicBakedModelProvider.java:163)
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.get(DynamicBakedModelProvider.java:29)
+	at net.minecraft.class_1092.getModel(class_1092.java:1552)
+	at net.minecraft.class_918.wrapOperation$zho000$cithotfix$getModel(class_918.java:542)
+	at net.minecraft.class_918.method_4019(class_918.java:250)
+	at net.minecraft.class_332.method_51425(class_332.java:578)
+	at net.minecraft.class_332.method_51424(class_332.java:571)
+	at net.minecraft.class_332.method_51428(class_332.java:551)
+	at net.minecraft.class_465.method_2385(class_465.java:257)
+	at net.minecraft.class_465.method_25394(class_465.java:113)
+	at net.minecraft.class_485.method_25394(class_485.java:32)
+	at net.minecraft.class_481.method_25394(class_481.java:760)
+	at net.minecraft.class_437.method_47413(class_437.java:120)
+	at net.minecraft.class_757.mixinextras$bridge$method_47413$251(class_757.java)
+	at net.minecraft.class_757.wrapOperation$blc000$fabric-screen-api-v1$onRenderScreen(class_757.java:3601)
+	at net.minecraft.class_757.mixinextras$bridge$wrapOperation$blc000$fabric-screen-api-v1$onRenderScreen$252(class_757.java)
+	at net.minecraft.class_757.wrapOperation$dkk000$optigui$renderCurrentScreenWithTooltip(class_757.java:6121)
+	at net.minecraft.class_757.method_3192(class_757.java:922)
+	at net.minecraft.class_310.method_1523(class_310.java:1320)
+	at net.minecraft.class_310.method_1514(class_310.java:888)
+	at net.minecraft.client.main.Main.main(Main.java:265)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:243)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:278)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.isVanillaTopLevelModel(DynamicBakedModelProvider.java:133)
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.get(DynamicBakedModelProvider.java:163)
+	at org.embeddedt.modernfix.dynamicresources.DynamicBakedModelProvider.get(DynamicBakedModelProvider.java:29)
+	at net.minecraft.class_1092.getModel(class_1092.java:1552)
+	at net.minecraft.class_918.wrapOperation$zho000$cithotfix$getModel(class_918.java:542)
+	at net.minecraft.class_918.method_4019(class_918.java:250)
+	at net.minecraft.class_332.method_51425(class_332.java:578)
+	at net.minecraft.class_332.method_51424(class_332.java:571)
+	at net.minecraft.class_332.method_51428(class_332.java:551)
+	at net.minecraft.class_465.method_2385(class_465.java:257)
+	at net.minecraft.class_465.method_25394(class_465.java:113)
+	at net.minecraft.class_485.method_25394(class_485.java:32)
+	at net.minecraft.class_481.method_25394(class_481.java:760)
+	at net.minecraft.class_437.method_47413(class_437.java:120)
+	at net.minecraft.class_757.mixinextras$bridge$method_47413$251(class_757.java)
+	at net.minecraft.class_757.wrapOperation$blc000$fabric-screen-api-v1$onRenderScreen(class_757.java:3601)
+	at net.minecraft.class_757.mixinextras$bridge$wrapOperation$blc000$fabric-screen-api-v1$onRenderScreen$252(class_757.java)
+	at net.minecraft.class_757.wrapOperation$dkk000$optigui$renderCurrentScreenWithTooltip(class_757.java:6121)
+Mixins in Stacktrace:
+	net.minecraft.class_1092:
+		net.fabricmc.fabric.mixin.resource.loader.client.KeyedResourceReloadListenerClientMixin (fabric-resource-loader-v0.client.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.dynamic_resources.ModelManagerMixin (modernfix-common.mixins.json)
+		net.fabricmc.fabric.mixin.client.model.loading.BakedModelManagerMixin (fabric-model-loading-api-v1.mixins.json)
+		foundationgames.enhancedblockentities.mixin.BakedModelManagerMixin (enhancedblockentities.mixins.json)
+		me.pepperbell.continuity.client.mixin.BakedModelManagerMixin (continuity.mixins.json)
+	net.minecraft.class_918:
+		com.cithotfix.mixin.ItemRendererMixin (cithotfix.mixins.json)
+		net.fabricmc.fabric.mixin.resource.loader.client.KeyedResourceReloadListenerClientMixin (fabric-resource-loader-v0.client.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.dynamic_resources.ItemRendererMixin (modernfix-common.mixins.json)
+		net.irisshaders.iris.mixin.entity_render_context.MixinItemRenderer (mixins.iris.json)
+		link.infra.indium.mixin.renderer.MixinItemRenderer (indium.mixins.json)
+		me.jellysquid.mods.sodium.mixin.features.render.model.item.ItemRendererMixin (sodium.mixins.json)
+	net.minecraft.class_332:
+		org.redlance.dima_dencep.mods.rrls.mixins.workaround.GuiGraphicsMixin (rrls.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.hud_batching.consumer.MixinDrawContext (immediatelyfast-common.mixins.json)
+		com.misterpemodder.shulkerboxtooltip.mixin.client.GuiGraphicsMixin (shulkerboxtooltip-common.mixins.json)
+		fi.dy.masa.malilib.mixin.MixinDrawContext (mixins.malilib.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinDrawContext (tcdcommons.client.mixin.events.json)
+		com.anthonyhilyard.iceberg.mixin.GuiGraphicsMixin (iceberg.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.hooks.AccessorDrawContext (tcdcommons.client.mixin.hooks.json)
+		com.anthonyhilyard.legendarytooltips.mixin.GuiGraphicsMixin (legendarytooltips.mixins.json)
+		net.raphimc.immediatelyfast.fabric.injection.mixins.hud_batching.consumer.MixinDrawContext (immediatelyfast-fabric.mixins.json)
+		me.jellysquid.mods.sodium.mixin.features.textures.animations.tracking.DrawContextMixin (sodium.mixins.json)
+	net.minecraft.class_465:
+		fi.dy.masa.litematica.mixin.MixinHandledScreen (mixins.litematica.json)
+		fi.dy.masa.litematica.mixin.IMixinHandledScreen (mixins.litematica.json)
+		com.misterpemodder.shulkerboxtooltip.mixin.client.fabric.AbstractContainerScreenMixin (shulkerboxtooltip-fabric.mixins.json)
+		fi.dy.masa.malilib.mixin.MixinHandledScreen (mixins.malilib.json)
+		com.misterpemodder.shulkerboxtooltip.mixin.client.AbstractContainerScreenMixin (shulkerboxtooltip-common.mixins.json)
+		mezz.jei.fabric.mixin.AbstractContainerScreenMixin (jei.mixins.json)
+		dev.isxander.debugify.client.mixins.basic.mc577.AbstractContainerScreenMixin (debugify.client.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.screen_batching.MixinHandledScreen (immediatelyfast-common.mixins.json)
+		net.raphimc.immediatelyfast.fabric.injection.mixins.screen_batching.MixinHandledScreen (immediatelyfast-fabric.mixins.json)
+	net.minecraft.class_485:
+		mezz.jei.fabric.mixin.EffectRenderingInventoryScreenMixin (jei.mixins.json)
+	net.minecraft.class_481:
+		net.fabricmc.fabric.mixin.itemgroup.client.CreativeInventoryScreenMixin (fabric-item-group-api-v1.client.mixins.json)
+	net.minecraft.class_437:
+		net.fabricmc.fabric.mixin.screen.ScreenMixin (fabric-screen-api-v1.mixins.json)
+		com.anthonyhilyard.iceberg.mixin.ScreenMixin (iceberg.mixins.json)
+		mezz.jei.fabric.mixin.ScreenMixin (jei.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinScreen (tcdcommons.client.mixin.events.json)
+		org.thinkingstudio.ryoamiclights.fabric.mixin.ScreenMixin (ryoamiclights.fabric.mixins.json)
+		net.fabricmc.fabric.mixin.screen.ScreenAccessor (fabric-screen-api-v1.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.hooks.AccessorScreen (tcdcommons.client.mixin.hooks.json)
+		opekope2.optigui.mixin.ScreenMixin (optigui.mixins.json)
+	net.minecraft.class_757:
+		me.flashyreese.mods.sodiumextra.mixin.prevent_shaders.MixinGameRenderer (sodium-extra.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinGameRenderer (tcdcommons.client.mixin.events.json)
+		dev.isxander.zoomify.mixins.zoom.GameRendererMixin (zoomify.mixins.json)
+		net.fabricmc.fabric.mixin.screen.GameRendererMixin (fabric-screen-api-v1.mixins.json)
+		net.irisshaders.iris.mixin.MixinModelViewBobbing (mixins.iris.json)
+		dynamic_fps.impl.mixin.GameRendererMixin (dynamic_fps-common.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.core.compat.MixinGameRenderer (immediatelyfast-common.mixins.json)
+		traben.entity_model_features.mixin.MixinGameRenderer (entity_model_features-common.mixins.json)
+		net.irisshaders.iris.mixin.GameRendererAccessor (mixins.iris.json)
+		de.johni0702.minecraft.bobby.mixin.GameRendererMixin (bobby.mixins.json)
+		net.irisshaders.iris.mixin.MixinGameRenderer_NightVisionCompat (mixins.iris.json)
+		me.jellysquid.mods.sodium.mixin.features.gui.hooks.console.GameRendererMixin (sodium.mixins.json)
+		opekope2.optigui.mixin.GameRendererMixin (optigui.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.compat.RendererKeyboardMouseMixin (rrls.mixins.json)
+		net.fabricmc.fabric.mixin.client.rendering.shader.GameRendererMixin (fabric-rendering-v1.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.GameRendererMixin (rrls.mixins.json)
+		dev.isxander.zoomify.mixins.zoom.secondary.GameRendererMixin (zoomify.mixins.json)
+		xaero.map.mixin.MixinGameRenderer (xaeroworldmap.mixins.json)
+		net.irisshaders.iris.mixin.MixinGameRenderer (mixins.iris.json)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.class_481
+	Mouse location: Scaled: (320, 178). Absolute: (962.000000, 534.000000)
+	Screen size: Scaled: (640, 360). Absolute: (1920, 1080). Scale factor of 3.000000
+Stacktrace:
+	at net.minecraft.class_757.method_3192(class_757.java:922)
+	at net.minecraft.class_310.method_1523(class_310.java:1320)
+	at net.minecraft.class_310.method_1514(class_310.java:888)
+	at net.minecraft.client.main.Main.main(Main.java:265)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:243)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:278)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+Mixins in Stacktrace:
+	net.minecraft.class_757:
+		me.flashyreese.mods.sodiumextra.mixin.prevent_shaders.MixinGameRenderer (sodium-extra.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinGameRenderer (tcdcommons.client.mixin.events.json)
+		dev.isxander.zoomify.mixins.zoom.GameRendererMixin (zoomify.mixins.json)
+		net.fabricmc.fabric.mixin.screen.GameRendererMixin (fabric-screen-api-v1.mixins.json)
+		net.irisshaders.iris.mixin.MixinModelViewBobbing (mixins.iris.json)
+		dynamic_fps.impl.mixin.GameRendererMixin (dynamic_fps-common.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.core.compat.MixinGameRenderer (immediatelyfast-common.mixins.json)
+		traben.entity_model_features.mixin.MixinGameRenderer (entity_model_features-common.mixins.json)
+		net.irisshaders.iris.mixin.GameRendererAccessor (mixins.iris.json)
+		de.johni0702.minecraft.bobby.mixin.GameRendererMixin (bobby.mixins.json)
+		net.irisshaders.iris.mixin.MixinGameRenderer_NightVisionCompat (mixins.iris.json)
+		me.jellysquid.mods.sodium.mixin.features.gui.hooks.console.GameRendererMixin (sodium.mixins.json)
+		opekope2.optigui.mixin.GameRendererMixin (optigui.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.compat.RendererKeyboardMouseMixin (rrls.mixins.json)
+		net.fabricmc.fabric.mixin.client.rendering.shader.GameRendererMixin (fabric-rendering-v1.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.GameRendererMixin (rrls.mixins.json)
+		dev.isxander.zoomify.mixins.zoom.secondary.GameRendererMixin (zoomify.mixins.json)
+		xaero.map.mixin.MixinGameRenderer (xaeroworldmap.mixins.json)
+		net.irisshaders.iris.mixin.MixinGameRenderer (mixins.iris.json)
+	net.minecraft.class_310:
+		com.aizistral.nochatreports.fabric.mixins.client.MixinMinecraft (mixins/fabric/nochatreports-fabric.mixins.json)
+		xaero.map.mixin.MixinMinecraftClient (xaeroworldmap.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_Keybinds (mixins.iris.json)
+		net.fabricmc.fabric.mixin.event.interaction.client.MinecraftClientMixin (fabric-events-interaction-v0.client.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.blast_search_trees.MinecraftMixin (modernfix-common.mixins.json)
+		dev.isxander.yacl3.mixin.MinecraftMixin (yacl.mixins.json)
+		org.thinkingstudio.ryoamiclights.mixin.MinecraftClientMixin (ryoamiclights.common.mixins.json)
+		me.jellysquid.mods.sodium.mixin.core.MinecraftClientMixin (sodium.mixins.json)
+		jerozgen.languagereload.mixin.MinecraftClientMixin (languagereload.mixins.json)
+		org.thinkingstudio.obsidianui.fabric.mixin.MinecraftClientMixin (obsidianui.fabric.mixins.json)
+		net.fabricmc.fabric.mixin.networking.client.accessor.MinecraftClientAccessor (fabric-networking-api-v1.client.mixins.json)
+		fi.dy.masa.litematica.mixin.MixinMinecraftClient (mixins.litematica.json)
+		com.kingcontaria.fastquit.mixin.MinecraftClientMixin (fastquit.mixins.json)
+		org.embeddedt.modernfix.common.mixin.feature.measure_time.MinecraftMixin (modernfix-common.mixins.json)
+		net.fabricmc.fabric.mixin.registry.sync.client.MinecraftClientMixin (fabric-registry-sync-v0.client.mixins.json)
+		me.flashyreese.mods.sodiumextra.mixin.gui.MinecraftClientAccessor (sodium-extra.mixins.json)
+		org.embeddedt.modernfix.fabric.mixin.core.MCMixin_Fabric (modernfix-fabric.mixins.json)
+		org.embeddedt.modernfix.common.mixin.bugfix.world_leaks.MinecraftMixin (modernfix-common.mixins.json)
+		dynamic_fps.impl.mixin.MinecraftMixin (dynamic_fps-common.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.core.MixinMinecraftClient (immediatelyfast-common.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.dedicated_reload_executor.MinecraftMixin (modernfix-common.mixins.json)
+		com.kingcontaria.fastquit.mixin.MinecraftClientAccessor (fastquit.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_PipelineManagement (mixins.iris.json)
+		malte0811.ferritecore.mixin.fabric.MinecraftMixin (ferritecore.fabric.mixin.json)
+		org.embeddedt.modernfix.common.mixin.bugfix.concurrency.MinecraftMixin (modernfix-common.mixins.json)
+		jerozgen.languagereload.mixin.MinecraftClientAccessor (languagereload.mixins.json)
+		com.noxcrew.noxesium.mixin.component.ext.MinecraftExt (noxesium.mixins.json)
+		com.noxcrew.noxesium.mixin.performance.render.MinecraftMixin (noxesium.mixins.json)
+		com.aizistral.nochatreports.common.mixins.client.MixinMinecraft (mixins/common/nochatreports.mixins.json)
+		traben.entity_texture_features.mixin.reloading.MixinResourceReload (entity_texture_features-common.mixins.json)
+		net.fabricmc.fabric.mixin.datagen.client.MinecraftClientMixin (fabric-data-generation-api-v1.client.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.client.MinecraftClientMixin (fabric-lifecycle-events-v1.client.mixins.json)
+		me.ramidzkh.fabrishot.mixins.MinecraftClientMixin (mixins.fabrishot.json)
+		dev.isxander.zoomify.mixins.hooks.MinecraftClientMixin (zoomify.mixins.json)
+		betteradvancements.mixin.MinecraftMixin (betteradvancements.mixins.json)
+		net.fabricmc.fabric.mixin.screen.MinecraftClientMixin (fabric-screen-api-v1.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_Images (mixins.iris.json)
+		opekope2.optigui.mixin.MinecraftClientMixin (optigui.mixins.json)
+		foundationgames.enhancedblockentities.mixin.MinecraftClientMixin (enhancedblockentities.mixins.json)
+		traben.entity_texture_features.mixin.reloading.MixinMinecraftClient (entity_texture_features-common.mixins.json)
+		traben.entity_model_features.mixin.accessor.MinecraftClientAccessor (entity_model_features-common.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinMinecraftClient (tcdcommons.client.mixin.events.json)
+		traben.entity_model_features.mixin.MixinResourceReloadStart (entity_model_features-common.mixins.json)
+		traben.entity_model_features.mixin.MixinResourceReloadEnd (entity_model_features-common.mixins.json)
+		fi.dy.masa.malilib.mixin.MixinMinecraftClient (mixins.malilib.json)
+		de.johni0702.minecraft.bobby.mixin.MinecraftClientMixin (bobby.mixins.json)
+		com.anthonyhilyard.iceberg.mixin.MinecraftMixin (iceberg.mixins.json)
+		org.embeddedt.modernfix.fabric.mixin.feature.measure_time.MinecraftMixin_Fabric (modernfix-fabric.mixins.json)
+		com.anthonyhilyard.prism.mixin.MinecraftMixin (prism.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.MinecraftClientMixin (rrls.mixins.json)
+		mezz.jei.fabric.mixin.MinecraftMixin (jei.mixins.json)
+
+-- Uptime --
+Details:
+	JVM uptime: 101.575s
+	Wall uptime: 67.161s
+	High-res time: 58.161s
+	Client ticks: 834 ticks / 41.700s
+Stacktrace:
+	at net.minecraft.class_310.method_1587(class_310.java:2548)
+	at net.minecraft.class_310.method_54580(class_310.java:983)
+	at net.minecraft.class_310.method_1514(class_310.java:908)
+	at net.minecraft.client.main.Main.main(Main.java:265)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:243)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:278)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:143)
+	at org.multimc.EntryPoint.main(EntryPoint.java:34)
+Mixins in Stacktrace:
+	net.minecraft.class_310:
+		com.aizistral.nochatreports.fabric.mixins.client.MixinMinecraft (mixins/fabric/nochatreports-fabric.mixins.json)
+		xaero.map.mixin.MixinMinecraftClient (xaeroworldmap.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_Keybinds (mixins.iris.json)
+		net.fabricmc.fabric.mixin.event.interaction.client.MinecraftClientMixin (fabric-events-interaction-v0.client.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.blast_search_trees.MinecraftMixin (modernfix-common.mixins.json)
+		dev.isxander.yacl3.mixin.MinecraftMixin (yacl.mixins.json)
+		org.thinkingstudio.ryoamiclights.mixin.MinecraftClientMixin (ryoamiclights.common.mixins.json)
+		me.jellysquid.mods.sodium.mixin.core.MinecraftClientMixin (sodium.mixins.json)
+		jerozgen.languagereload.mixin.MinecraftClientMixin (languagereload.mixins.json)
+		org.thinkingstudio.obsidianui.fabric.mixin.MinecraftClientMixin (obsidianui.fabric.mixins.json)
+		net.fabricmc.fabric.mixin.networking.client.accessor.MinecraftClientAccessor (fabric-networking-api-v1.client.mixins.json)
+		fi.dy.masa.litematica.mixin.MixinMinecraftClient (mixins.litematica.json)
+		com.kingcontaria.fastquit.mixin.MinecraftClientMixin (fastquit.mixins.json)
+		org.embeddedt.modernfix.common.mixin.feature.measure_time.MinecraftMixin (modernfix-common.mixins.json)
+		net.fabricmc.fabric.mixin.registry.sync.client.MinecraftClientMixin (fabric-registry-sync-v0.client.mixins.json)
+		me.flashyreese.mods.sodiumextra.mixin.gui.MinecraftClientAccessor (sodium-extra.mixins.json)
+		org.embeddedt.modernfix.fabric.mixin.core.MCMixin_Fabric (modernfix-fabric.mixins.json)
+		org.embeddedt.modernfix.common.mixin.bugfix.world_leaks.MinecraftMixin (modernfix-common.mixins.json)
+		dynamic_fps.impl.mixin.MinecraftMixin (dynamic_fps-common.mixins.json)
+		net.raphimc.immediatelyfast.injection.mixins.core.MixinMinecraftClient (immediatelyfast-common.mixins.json)
+		org.embeddedt.modernfix.common.mixin.perf.dedicated_reload_executor.MinecraftMixin (modernfix-common.mixins.json)
+		com.kingcontaria.fastquit.mixin.MinecraftClientAccessor (fastquit.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_PipelineManagement (mixins.iris.json)
+		malte0811.ferritecore.mixin.fabric.MinecraftMixin (ferritecore.fabric.mixin.json)
+		org.embeddedt.modernfix.common.mixin.bugfix.concurrency.MinecraftMixin (modernfix-common.mixins.json)
+		jerozgen.languagereload.mixin.MinecraftClientAccessor (languagereload.mixins.json)
+		com.noxcrew.noxesium.mixin.component.ext.MinecraftExt (noxesium.mixins.json)
+		com.noxcrew.noxesium.mixin.performance.render.MinecraftMixin (noxesium.mixins.json)
+		com.aizistral.nochatreports.common.mixins.client.MixinMinecraft (mixins/common/nochatreports.mixins.json)
+		traben.entity_texture_features.mixin.reloading.MixinResourceReload (entity_texture_features-common.mixins.json)
+		net.fabricmc.fabric.mixin.datagen.client.MinecraftClientMixin (fabric-data-generation-api-v1.client.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.client.MinecraftClientMixin (fabric-lifecycle-events-v1.client.mixins.json)
+		me.ramidzkh.fabrishot.mixins.MinecraftClientMixin (mixins.fabrishot.json)
+		dev.isxander.zoomify.mixins.hooks.MinecraftClientMixin (zoomify.mixins.json)
+		betteradvancements.mixin.MinecraftMixin (betteradvancements.mixins.json)
+		net.fabricmc.fabric.mixin.screen.MinecraftClientMixin (fabric-screen-api-v1.mixins.json)
+		net.irisshaders.iris.mixin.MixinMinecraft_Images (mixins.iris.json)
+		opekope2.optigui.mixin.MinecraftClientMixin (optigui.mixins.json)
+		foundationgames.enhancedblockentities.mixin.MinecraftClientMixin (enhancedblockentities.mixins.json)
+		traben.entity_texture_features.mixin.reloading.MixinMinecraftClient (entity_texture_features-common.mixins.json)
+		traben.entity_model_features.mixin.accessor.MinecraftClientAccessor (entity_model_features-common.mixins.json)
+		io.github.thecsdev.tcdcommons.client.mixin.events.MixinMinecraftClient (tcdcommons.client.mixin.events.json)
+		traben.entity_model_features.mixin.MixinResourceReloadStart (entity_model_features-common.mixins.json)
+		traben.entity_model_features.mixin.MixinResourceReloadEnd (entity_model_features-common.mixins.json)
+		fi.dy.masa.malilib.mixin.MixinMinecraftClient (mixins.malilib.json)
+		de.johni0702.minecraft.bobby.mixin.MinecraftClientMixin (bobby.mixins.json)
+		com.anthonyhilyard.iceberg.mixin.MinecraftMixin (iceberg.mixins.json)
+		org.embeddedt.modernfix.fabric.mixin.feature.measure_time.MinecraftMixin_Fabric (modernfix-fabric.mixins.json)
+		com.anthonyhilyard.prism.mixin.MinecraftMixin (prism.mixins.json)
+		org.redlance.dima_dencep.mods.rrls.mixins.MinecraftClientMixin (rrls.mixins.json)
+		mezz.jei.fabric.mixin.MinecraftMixin (jei.mixins.json)
+
+-- Affected level --
+Details:
+	All players: 1 total; [class_746['Kroniks53'/783, l='ClientLevel', x=61.34, y=89.00, z=-404.26]]
+	Chunk stats: 4096, 705 F: 1 L: 0 U: 0 C: 0
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,114,0), Section: (at 0,2,0 in 0,7,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 1384814 game time, 1534 day time
+	Server brand: §b§Relax§aMine
+	Server type: Non-integrated multiplayer server
+	Tracked entity count: 58
+
+-- Last reload --
+Details:
+	Reload number: 2
+	Reload reason: manual
+	Finished: Yes
+	Packs: vanilla, fabric, animatica, betteradvancements, betterf3, bettermounthud, betterstats, boatiview, bobby, c2me, caffeineconfig, capes, chat_heads, chatanimation, cloth-config, continuity, debugify, dynamic_fps, enhancedblockentities, entity_model_features, entity_texture_features, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fabrishot, fastquit, forgeconfigapiport, holdthatchunk, immediatelyfast, indium, iris, jei, languagereload, lazydfu, legendarytooltips, litematica, lithium, malilib, midnightlib, mixintrace, modernfix, modmenu, morechathistory, nochatreports, noxesium, obsidianui, optigui, plasmovoice, puzzle, puzzle-base, puzzle-gui, puzzle-models, puzzle-splashscreen, reeses-sodium-options, rrls, ryoamiclights, shulkerboxtooltip, sodium, sodium-extra, tcdcommons, visuality, xaeroworldmap, yet_another_config_lib_v3, yosbr, zoomify, continuity:default, continuity:glass_pane_culling_fix, file/Chat Reporting Helper.zip, file/LowOnFire_1.20.1.zip, file/SodiumTranslations.zip, file/Mod Menu Helper.zip, file/VanillaTweaks_r566868_MC1.21.x.zip, file/Icons v.1.11.2.zip, file/FreshAnimations_v1.9.2.zip, file/EBE_1.20.x_v1.1.zip, file/trimmable-tools-mc1.20-v1.0.6.zip, file/trims-expanded-1.3.0, file/Fast Better Grass.zip
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.6
+	Minecraft Version ID: 1.20.6
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.3, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 665329664 bytes (634 MiB) / 1317011456 bytes (1256 MiB) up to 5242880000 bytes (5000 MiB)
+	CPUs: 8
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 4700U with Radeon Graphics         
+	Identifier: AuthenticAMD Family 23 Model 96 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 2.00
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 8
+	Graphics card #0 name: AMD Radeon(TM) Graphics
+	Graphics card #0 vendor: Advanced Micro Devices, Inc.
+	Graphics card #0 VRAM (MB): 512.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 30.0.13044.0
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 38261.36
+	Virtual memory used (MB): 24304.43
+	Swap memory total (MB): 22528.00
+	Swap memory used (MB): 2162.33
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx5000m
+	Fabric Mods: 
+		animatica: Animatica 0.6.1+1.20.6
+		betteradvancements: Better Advancements 0.4.2.18
+		betterf3: BetterF3 10.0.2
+		bettermounthud: Better Mount HUD 1.2.3
+		betterstats: Better Statistics Screen 3.12.6+fabric-1.20.6
+		boatiview: Boat Item View Fabric 0.0.5
+		bobby: Bobby 5.2.1+mc1.20.6
+			com_typesafe_config: config 1.4.2
+			fabric-api-base: Fabric API Base 0.4.40+80f8cf51ff
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.24+80f8cf51ff
+			io_leangen_geantyref_geantyref: geantyref 1.3.13
+			org_spongepowered_configurate-core: configurate-core 4.1.2
+			org_spongepowered_configurate-hocon: configurate-hocon 4.1.2
+		c2me: Concurrent Chunk Management Engine 0.2.0+alpha.11.100+1.20.6
+			c2me-base: Concurrent Chunk Management Engine (Base) 0.2.0+alpha.11.100+1.20.6
+			c2me-client-uncapvd: Concurrent Chunk Management Engine (Client/Uncap View Distance) 0.2.0+alpha.11.100+1.20.6
+			c2me-fixes-chunkio-threading-issues: Concurrent Chunk Management Engine (Fixes/Chunk IO/Threading Issues) 0.2.0+alpha.11.100+1.20.6
+			c2me-fixes-general-threading-issues: Concurrent Chunk Management Engine (Fixes/General/Threading Issues) 0.2.0+alpha.11.100+1.20.6
+			c2me-fixes-worldgen-threading-issues: Concurrent Chunk Management Engine (Fixes/WorldGen/Threading Issues) 0.2.0+alpha.11.100+1.20.6
+			c2me-fixes-worldgen-vanilla-bugs: Concurrent Chunk Management Engine (Fixes/WorldGen/Vanilla Bugs) 0.2.0+alpha.11.100+1.20.6
+			c2me-notickvd: Concurrent Chunk Management Engine (No Tick View Distance) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-allocs: Concurrent Chunk Management Engine (Optimizations/Memory Allocations) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-chunk-access: Concurrent Chunk Management Engine (Optimizations/Chunk Access) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-chunkio: Concurrent Chunk Management Engine (Optimizations/Chunk IO) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-math: Concurrent Chunk Management Engine (Optimizations/Math) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-scheduling: Concurrent Chunk Management Engine (Optimizations/Scheduling) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-worldgen-general: Concurrent Chunk Management Engine (Optimizations/General WorldGen) 0.2.0+alpha.11.100+1.20.6
+			c2me-opts-worldgen-vanilla: Concurrent Chunk Management Engine (Optimizations/Vanilla WorldGen) 0.2.0+alpha.11.100+1.20.6
+			c2me-rewrites-chunk-serializer: Concurrent Chunk Management Engine (Rewrites/Chunk Serializer) 0.2.0+alpha.11.100+1.20.6
+			c2me-rewrites-chunkio: Concurrent Chunk Management Engine (Rewrites/Chunk IO) 0.2.0+alpha.11.100+1.20.6
+			c2me-server-utils: Concurrent Chunk Management Engine (Server Utils) 0.2.0+alpha.11.100+1.20.6
+			c2me-threading-chunkio: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.100+1.20.6
+			c2me-threading-lighting: Concurrent Chunk Management Engine (Threading/Lighting) 0.2.0+alpha.11.100+1.20.6
+			c2me-threading-worldgen: Concurrent Chunk Management Engine (Threading/WorldGen) 0.2.0+alpha.11.100+1.20.6
+			com_ibm_async_asyncutil: asyncutil 0.1.0
+			net_objecthunter_exp4j: exp4j 0.4.8
+			org_threadly_threadly: threadly 7.0
+		capes: Capes 1.5.4+1.20.5
+		chat_heads: Chat Heads 0.12.13
+		chatanimation: ChatAnimation 1.0.6
+			mixinextras: MixinExtras 0.3.6
+		cithotfix: CIT Enchanted Books: HotFix 1.20.6-0-fabric
+		cloth-config: Cloth Config v14 14.0.126
+			cloth-basic-math: cloth-basic-math 0.6.1
+		continuity: Continuity 3.0.0-beta.5+1.20.5
+		debugify: Debugify 1.20.6+1.0
+		dynamic_fps: Dynamic FPS 3.6.0
+			net_lostluma_battery: battery 1.0.1
+		enhancedblockentities: Enhanced Block Entities 0.10.1+1.20.6
+		entity_model_features: Entity Model Features 2.1.3
+		entity_texture_features: Entity Texture Features 6.1.3
+			org_apache_httpcomponents_httpmime: httpmime 4.5.10
+		fabric-api: Fabric API 0.100.4+1.20.6
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.59+e9d2a72bb0
+			fabric-biome-api-v1: Fabric Biome API (v1) 13.0.25+be5d88beb0
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.20+6dfe4c9bb0
+			fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.8+80f8cf51b0
+			fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.50+80f8cf51b0
+			fabric-client-tags-api-v1: Fabric Client Tags 1.1.12+7f945d5bb0
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.45+f71b366fb0
+			fabric-commands-v0: Fabric Commands (v0) 0.2.62+df3654b3b0
+			fabric-content-registries-v0: Fabric Content Registries (v0) 8.0.6+b82b2392b0
+			fabric-convention-tags-v1: Fabric Convention Tags 2.0.7+7f945d5bb0
+			fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.1.3+f4bfb622b0
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.27+80f8cf51b0
+			fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.1.17+2a2c66b6b0
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 19.2.4+a5d5299db0
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.68+94793913b0
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.6.8+e9d2a72bb0
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.7.6+c5fc38b3b0
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.50+80f8cf51b0
+			fabric-item-api-v1: Fabric Item API (v1) 8.2.3+6e5bbc4ab0
+			fabric-item-group-api-v1: Fabric Item Group API (v1) 4.1.1+f4bfb622b0
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.45+80f8cf51b0
+			fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.43+df3654b3b0
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.3.4+c5fc38b3b0
+			fabric-loot-api-v2: Fabric Loot API (v2) 3.0.6+97f703dab0
+			fabric-message-api-v1: Fabric Message API (v1) 6.0.11+a7dc0e41b0
+			fabric-model-loading-api-v1: Fabric Model Loading API (v1) 1.0.12+80f8cf51b0
+			fabric-models-v0: Fabric Models (v0) 0.4.11+9386d8a7b0
+			fabric-networking-api-v1: Fabric Networking API (v1) 4.2.0+a916f7c5b0
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 15.1.5+c5fc38b3b0
+			fabric-particles-v1: Fabric Particles (v1) 4.0.0+c5fc38b3b0
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 5.0.6+9c745bbbb0
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 5.0.18+a916f7c5b0
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 3.3.0+81dac6a1b0
+			fabric-renderer-indigo: Fabric Renderer - Indigo 1.5.15+41791025b0
+			fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.62+df3654b3b0
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.46+73761d2eb0
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.3+2c869dedb0
+			fabric-rendering-v0: Fabric Rendering (v0) 1.1.65+df3654b3b0
+			fabric-rendering-v1: Fabric Rendering (v1) 4.2.5+850ef40bb0
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 4.2.0+a5d5299db0
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 1.1.1+f4bfb622b0
+			fabric-screen-api-v1: Fabric Screen API (v1) 2.0.21+7b70ea8ab0
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.75+8c7b71c2b0
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.21+c5fc38b3b0
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 5.1.7+7fc4b352b0
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.0.10+74e2f560b0
+		fabric-language-kotlin: Fabric Language Kotlin 1.11.0+kotlin.2.0.0
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 2.0.0
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 2.0.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 2.0.0
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 2.0.0
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.24.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.8.1
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.8.1
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.6.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.6.3
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.6.3
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.6.3
+		fabricloader: Fabric Loader 0.15.11
+		fabrishot: Fabrishot 1.13.1
+		fastquit: FastQuit 3.0.0+1.20.6
+		ferritecore: FerriteCore 6.1.1
+		forgeconfigapiport: Forge Config API Port 20.6.1
+			com_electronwill_night-config_core: core 3.6.7
+			com_electronwill_night-config_toml: toml 3.6.7
+		holdthatchunk: Hold That Chunk 2.1.0
+		iceberg: Iceberg 1.1.24
+		immediatelyfast: ImmediatelyFast 1.2.18+1.20.6
+			net_lenni0451_reflect: Reflect 1.3.4
+		indium: Indium 1.0.34+mc1.20.1
+		iris: Iris 1.7.2+mc1.20.6
+			io_github_douira_glsl-transformer: glsl-transformer 2.0.1
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.13.1
+		isxander-main-menu-credits: Main Menu Credits 1.2.0
+		java: Java HotSpot(TM) 64-Bit Server VM 21
+		jei: Just Enough Items 18.0.0.65
+		languagereload: Language Reload 1.6.1+1.20.6
+		lazydfu: LazyDFU 0.1.3
+		legendarytooltips: Legendary Tooltips 1.4.6
+		litematica: Litematica 0.18.1
+		lithium: Lithium 0.12.5
+		malilib: MaLiLib 0.19.0
+		minecraft: Minecraft 1.20.6
+		mixintrace: MixinTrace 1.1.1+1.17
+		modelfix: Model Gap Fix 1.14
+		modernfix: ModernFix 5.18.0+mc1.20.6
+		modmenu: Mod Menu 10.0.0
+			placeholder-api: Placeholder API 2.4.0-pre.1+1.20.5
+		morechathistory: More Chat History 1.3.1
+		nochatreports: No Chat Reports 1.20.6-v2.7.1
+		noxesium: Noxesium 2.0.5+6bc9e3d
+			com_noxcrew_noxesium_api_: api 2.0.5+6bc9e3d
+		obsidianui: ObsidianUI 0.2.5+mc1.20.6
+		optigui: OptiGUI 2.3.0-beta.2+1.20.5
+			org_apache_commons_commons-text: commons-text 1.12.0
+			org_ini4j_ini4j: ini4j 0.5.4
+		plasmovoice: Plasmo Voice 2.0.10
+			aopalliance_aopalliance: aopalliance 1.0
+			com_google_inject_guice: guice 5.0.1
+			fabric-permissions-api-v0: fabric-permissions-api 0.2-SNAPSHOT
+			javax_inject_javax_inject: javax.inject 1
+		prism: Prism 1.0.7
+		puzzle: Puzzle 1.6.2+1.20.6
+			midnightlib: MidnightLib 1.5.5
+			puzzle-base: Puzzle Base 1.6.2+1.20.6
+			puzzle-gui: Puzzle GUI 1.6.2+1.20.6
+			puzzle-models: Puzzle Models 1.6.2+1.20.6
+			puzzle-splashscreen: Puzzle Splash Screen 1.6.2+1.20.6
+		reeses-sodium-options: Reese's Sodium Options 1.7.2+mc1.20.5-build.103
+		rrls: Remove Reloading Screen 4.1.0+mc1.20.6-fabric
+		ryoamiclights: RyoamicLights 0.2.6+mc1.20.6
+		shulkerboxtooltip: Shulker Box Tooltip 4.1.4+1.20.6
+		sodium: Sodium 0.5.11+mc1.20.6
+		sodium-extra: Sodium Extra 0.5.6+mc1.20.6
+			caffeineconfig: CaffeineConfig 1.3.0+1.17
+		tcdcommons: TCD Commons API 3.12.3+fabric-1.20.6
+		tmmouse: TMMouse 1.0
+		visuality: Visuality 0.7.4+1.20.5
+		xaeroworldmap: Xaero's World Map 1.38.8
+		yet_another_config_lib_v3: YetAnotherConfigLib 3.5.0+1.20.6-fabric
+			com_twelvemonkeys_common_common-image: common-image 3.10.0
+			com_twelvemonkeys_common_common-io: common-io 3.10.0
+			com_twelvemonkeys_common_common-lang: common-lang 3.10.0
+			com_twelvemonkeys_imageio_imageio-core: imageio-core 3.10.0
+			com_twelvemonkeys_imageio_imageio-metadata: imageio-metadata 3.10.0
+			com_twelvemonkeys_imageio_imageio-webp: imageio-webp 3.10.0
+			org_quiltmc_parsers_gson: gson 0.2.1
+			org_quiltmc_parsers_json: json 0.2.1
+		yosbr: YOSBR 0.1.2
+		zoomify: Zoomify 2.14.0+1.20.6
+			com_akuleshov7_ktoml-core-jvm: ktoml-core-jvm 0.5.1
+	Loaded Shaderpack: (off)
+	Launched Version: 1.20.6
+	Backend library: LWJGL version 3.3.3-snapshot
+	Backend API: AMD Radeon(TM) Graphics GL version 3.2.14761 Core Profile Forward-Compatible No Error Context 21.30.44 30.0.13044.0, ATI Technologies Inc.
+	Window size: 1920x1080
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Universe: 400921fb54442d18
+	Type: Client (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 12/12 chunks
+	Resource Packs: vanilla, fabric, animatica, betteradvancements (incompatible), betterf3, bettermounthud, betterstats, boatiview (incompatible), bobby, c2me, caffeineconfig, capes, chat_heads, chatanimation, cloth-config, continuity, debugify, dynamic_fps, enhancedblockentities, entity_model_features, entity_texture_features, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-language-kotlin, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-models-v0, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-renderer-registries-v1, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v0, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, fabrishot, fastquit, forgeconfigapiport, holdthatchunk, immediatelyfast, indium, iris, jei (incompatible), languagereload, lazydfu, legendarytooltips, litematica, lithium, malilib, midnightlib, mixintrace, modernfix (incompatible), modmenu, morechathistory, nochatreports, noxesium, obsidianui, optigui, plasmovoice, puzzle, puzzle-base, puzzle-gui, puzzle-models, puzzle-splashscreen, reeses-sodium-options, rrls, ryoamiclights, shulkerboxtooltip, sodium, sodium-extra, tcdcommons, visuality, xaeroworldmap (incompatible), yet_another_config_lib_v3 (incompatible), yosbr, zoomify, continuity:default, continuity:glass_pane_culling_fix, file/Chat Reporting Helper.zip, file/LowOnFire_1.20.1.zip, file/SodiumTranslations.zip, file/Mod Menu Helper.zip, file/VanillaTweaks_r566868_MC1.21.x.zip, file/Icons v.1.11.2.zip, file/FreshAnimations_v1.9.2.zip, file/EBE_1.20.x_v1.1.zip, file/trimmable-tools-mc1.20-v1.0.6.zip, file/trims-expanded-1.3.0, file/Fast Better Grass.zip
+	Current Language: ru_ru
+	Locale: en_RU
+	CPU: 8x AMD Ryzen 7 4700U with Radeon Graphics 
