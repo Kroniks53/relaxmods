@@ -84,10 +84,10 @@
 				"light_server": false,
 				"highest_block": false,
 				"highest_block_server": false,
-				"biome": false,
+				"biome": true,
 				"local_difficulty": false,
 				"day_ticks": false,
-				"days_played": false,
+				"days_played": true,
 				"slime_chunk": false
 			}
 		}, 
