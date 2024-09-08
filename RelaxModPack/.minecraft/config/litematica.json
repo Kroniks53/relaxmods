@@ -66,7 +66,7 @@
     "commandNameSetblock": "setblock",
     "commandNameSummon": "summon",
     "commandTaskInterval": 1,
-    "customSchematicBaseDirectory": "C:\\Users\\ПК\\Desktop\\MultiMC\\instances\\Fabulously.Optimized-v5.12.0-beta.10\\.minecraft\\schematics",
+    "customSchematicBaseDirectory": "",
     "easyPlaceSwapInterval": 0,
     "pickBlockableSlots": "1,2,3,4,5",
     "toolItem": "minecraft:stick"
