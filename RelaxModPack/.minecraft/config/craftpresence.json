@@ -40,7 +40,7 @@
     "fallbackServerMotd": "A Minecraft Server",
     "serverData": {
       "default": {
-        "textOverride": "{server.motd.raw}"
+        "textOverride": "{server.motd.raw} ({server.players.current}/{server.players.max})"
       }
     }
   },
