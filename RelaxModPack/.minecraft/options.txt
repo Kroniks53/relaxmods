@@ -35,7 +35,7 @@ chatLinksPrompt:true
 discrete_mouse_scroll:false
 invertYMouse:false
 realmsNotifications:true
-showSubtitles:true
+showSubtitles:false
 directionalAudio:true
 touchscreen:false
 bobView:true
@@ -48,8 +48,7 @@ mouseSensitivity:0.5
 damageTiltStrength:1.0
 highContrast:false
 narratorHotkey:true
-resourcePacks:["vanilla","fabric","file/Chat Reporting Helper.zip","file/SodiumTranslations.zip","file/VanillaTweaks_r566868_MC1.21.x.zip","file/FreshAnimations_v1.9.2.zip","file/trimmable-tools-mc1.20-v1.0.6.zip","file/trims-expanded-1.3.0.zip","file/EBE_1.20.x_v1.1.zip","file/Mod Menu Helper.zip","file/LowOnFire_1.20.1.zip","continuity:glass_pane_culling_fix","file/Icons v.1.11.2.zip","continuity:default","file/Fast Better Grass.zip"]
-incompatibleResourcePacks:["boatiview","jei","modernfix","replaymod","worldedit","xaeroworldmap","yet_another_config_lib_v3"]
+resourcePacks:["vanilla","fabric","file/SodiumTranslations.zip","file/VanillaTweaks_r566868_MC1.21.x.zip","file/trimmable-tools-mc1.20-v1.0.6.zip","file/FreshAnimations_v1.9.2.zip","file/trims-expanded-1.3.0.zip","file/EBE_1.20.x_v1.1.zip","file/LowOnFire_1.20.1.zip","file/Icons v.1.11.2.zip","file/Mod Menu Helper.zip","file/Chat Reporting Helper.zip","continuity:glass_pane_culling_fix","continuity:default","file/Fast Better Grass.zip"]
 lastServer:
 lang:ru_ru
 chatVisibility:0
@@ -125,9 +124,6 @@ key_key.hotbar.9:key.keyboard.9
 key_key.dynamic_fps.toggle_forced:key.keyboard.unknown
 key_key.dynamic_fps.toggle_disabled:key.keyboard.unknown
 key_key.fabrishot.screenshot:key.keyboard.f9
-key_keybinds.waypoints.menu:key.keyboard.h
-key_keybinds.waypoint.add:key.keyboard.g
-key_keybinds.waypoints.toggle:key.keyboard.unknown
 key_key.modmenu.open_menu:key.keyboard.unknown
 key_key.optigui.inspect:key.keyboard.unknown
 key_key.presencefootsteps.settings:key.keyboard.f10
