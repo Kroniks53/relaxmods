@@ -1,8 +1,9 @@
 # Привет! Это моя сборка модов для игры на нашем сервере
 
+Скачать сборку: <br>
+[**4 сезон**](https://github.com/Kroniks53/relaxmods/archive/refs/heads/1.20.6-4season.zip) <br>
+[**3 сезон**](https://github.com/Kroniks53/relaxmods/archive/refs/heads/1.20.1-3season.zip) 
 
-Скачай сборку, нажав на кнопку `Source code(zip)` или `Исходный код(zip)`.  [**Клик!**](https://github.com/Kroniks53/relaxmods/archive/refs/heads/master.zip)
-
-Вот ссылка на гайд для **TLauncher** и **TL legacy**. [**Клик!**](https://youtu.be/9U89qLSotDA)
+Гайд для **TLauncher** и **TL legacy**. [**Клик!**](https://youtu.be/9U89qLSotDA)
 
 Гайд для **MultiMC**. [**Клик!**](GIDE.md)
