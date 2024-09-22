@@ -1,4 +1,4 @@
-# Привет! Это моя сборка модов для игры на нашем сервере
+# Привет! Это сборка для игры на сервере RelaxMine
 
 Скачать сборку: <br>
 [**4 сезон**](https://github.com/Kroniks53/relaxmods/archive/refs/heads/1.20.6-4season.zip) <br>
